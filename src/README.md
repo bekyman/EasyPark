@@ -1,7 +1,7 @@
 # ParkSmart Frontend Source
 
 The frontend is organized using a `src/` structure inspired by the reference
-`addis_park_luxe_1786460388844` project while retaining ParkSmart's current
+`EasyPark` project while retaining ParkSmart's current
 HTML/CSS/JavaScript implementation.
 
 - `components/` — reusable HTML component fragments
