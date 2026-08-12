@@ -1,0 +1,88 @@
+/* STAT CARD */
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1.5rem;
+
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border-radius: var(--radius-md);
+
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.stat-content {
+    min-width: 0;
+}
+
+.stat-value {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.stat-label {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+}
+
+.card {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.card-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.card img {
+    width: 100%;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+}
+
+.card-footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

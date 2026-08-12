@@ -1,0 +1,22 @@
+:root {
+    --color-primary: #3498db;
+    --primary-dark: #2980b9;
+    --primary-light: #5dade2;
+ 
+    --success: #2ecc71;
+    --warning: #f1c40f;
+    --danger: #e74c3c;
+
+    --backdground:#F8FAFC;
+    --surface:#FFFFFF;
+
+    --text:#0F172A;
+    --text-light:#64748B;
+
+    --border:#E2E8F0;
+
+    --shadow-sm:0 2px 10px rgba(0,0,0,.05);
+    --shadow-md:0 10px 30px rgba(0,0,0,.08);
+
+}
+

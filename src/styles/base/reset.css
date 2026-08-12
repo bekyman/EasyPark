@@ -1,0 +1,48 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    min-height: 100vh;
+}
+
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}   
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+    
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}   
+
+body{
+    margin: 50px;
+    background: orange;
+}

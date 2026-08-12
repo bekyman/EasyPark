@@ -1,0 +1,88 @@
+
+.site-footer {
+    background: var(--text-primary);
+    color: white;
+
+    margin-top: 5rem;
+}
+
+.footer-container {
+    width: min(1200px, 90%);
+    margin: auto;
+
+    padding: 4rem 0;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+}
+
+.footer-brand .logo {
+    color: white;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.8);
+
+    margin-top: 1rem;
+}
+
+.footer-links {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 2rem;
+}
+
+.footer-links h3 {
+    color: white;
+
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+
+    transition: color .3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    text-align: center;
+
+    padding: 1.5rem 0;
+}
+
+.footer-bottom p {
+    color: rgba(255,255,255,.7);
+}
+
+@media (max-width:768px){
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+
+        gap:3rem;
+
+    }
+
+    .footer-links{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
