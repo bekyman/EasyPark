@@ -24,6 +24,7 @@ async function loadComponents() {
         "[data-component]"
     );
 
+
     for (const component of components) {
 
         const name = component.dataset.component;
@@ -31,16 +32,22 @@ async function loadComponents() {
         try {
 
             const response = await fetch(
-                `../components/${name}.html`
+                `/src/components/${name}.html`
             );
 
+
             if (!response.ok) {
+
                 throw new Error(
-                    `Failed to load component: ${name}`
+                    `Failed to load component: ${name} (${response.status})`
                 );
+
             }
 
-            component.innerHTML = await response.text();
+
+            component.innerHTML =
+                await response.text();
+
 
         } catch (error) {
 
@@ -49,16 +56,27 @@ async function loadComponents() {
                 error
             );
 
-            component.innerHTML = "";
+
+            component.innerHTML = `
+                <div class="component-error">
+                    Failed to load component:
+                    <strong>${name}</strong>
+                </div>
+            `;
+
         }
+
     }
+
 }
 
 
 function initializeIcons() {
 
     if (typeof lucide !== "undefined") {
+
         lucide.createIcons();
+
     }
 
 }
