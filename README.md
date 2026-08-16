@@ -1,8 +1,8 @@
-# 🚗 ParkSmart
+# 🚗 EasyPark
 
 > **Find. Reserve. Park. Effortlessly.**
 
-ParkSmart is a full-stack smart parking management platform designed to simplify the parking experience for drivers while providing parking providers with powerful management tools. The project consists of a responsive web application and a mobile application that enable users to search for available parking spaces, make reservations, manage parking facilities, and monitor parking operations in real time.
+EasyPark is a smart parking management platform designed to simplify the parking experience for drivers while providing parking providers with powerful management tools. The project consists of a responsive web application and a mobile application that enable users to search for available parking spaces, make reservations, manage parking facilities, and monitor parking operations in real time.
 
 This project is being developed as a portfolio project to demonstrate professional software engineering practices, full-stack development skills, and modern application architecture.
 
@@ -12,7 +12,7 @@ This project is being developed as a portfolio project to demonstrate profession
 
 Finding parking in busy urban areas is often time-consuming and frustrating. Drivers spend valuable time searching for available parking spaces, while parking providers frequently rely on inefficient manual management systems.
 
-ParkSmart aims to solve these challenges by providing a centralized digital platform where users can:
+EasyPark aims to solve these challenges by providing a centralized digital platform where users can:
 
 * Search available parking lots
 * View real-time parking availability
@@ -121,9 +121,11 @@ To create a reliable, scalable, and user-friendly smart parking platform that im
 
 * Socket.IO
 
-## Mobile Application
+## Application Structure
 
-* React Native
+* Modular frontend architecture
+* Reusable components
+* Page-based organization
 
 ## Version Control
 
@@ -135,58 +137,91 @@ To create a reliable, scalable, and user-friendly smart parking platform that im
 # 📁 Project Structure
 
 ```text
-ParkSmart/
+EasyPark/
 │
 ├── docs/
-│   ├── PRD.md
-│   ├── SRS.md
-│   ├── SDD.md
-│   ├── DATABASE.md
-│   ├── API.md
-│   └── UML/
+│   └── ... project documentation
 │
-├── client/
+├── public/
+│   └── ... public/static assets
 │
-├── server/
-│
-├── mobile/
-│
-├── assets/
-│   ├── images/
-│   ├── icons/
-│   └── logos/
+├── src/
+│   │
+│   ├── components/
+│   │   ├── cta.html
+│   │   ├── featured.html
+│   │   ├── footer.html
+│   │   └── ... reusable UI components
+│   │
+│   ├── pages/
+│   │   └── ... page-level HTML files
+│   │
+│   ├── scripts/
+│   │   └── ... JavaScript files
+│   │
+│   ├── styles/
+│   │   └── ... CSS files
+│   │
+│   └── README.md
 │
 ├── README.md
-├── LICENSE
+├── ARCHITECTURE.md
 ├── CHANGELOG.md
-└── .gitignore
+├── LICENSE
+├── .gitattributes
+├── .gitignore
+├── .hintrc
+└── index.html
 ```
+
+### Directory Responsibilities
+
+| Directory/File | Purpose |
+|---|---|
+| `docs/` | Project and engineering documentation |
+| `public/` | Public/static assets used by the application |
+| `src/components/` | Reusable UI components and page sections |
+| `src/pages/` | Page-level application views |
+| `src/scripts/` | JavaScript application logic and interactions |
+| `src/styles/` | CSS stylesheets and visual presentation |
+| `src/README.md` | Documentation for the source layer |
+| `index.html` | Main application entry point |
+| `ARCHITECTURE.md` | Defines the project's architecture and organization |
+| `README.md` | Project overview, setup, and development information |
+| `CHANGELOG.md` | Project change history |
+| `LICENSE` | Project licensing information |
+| `.gitattributes` | Git attribute configuration |
+| `.gitignore` | Files and directories excluded from Git |
+| `.hintrc` | Web development/linting configuration |
+
 
 ---
 
 # 📌 Development Status
 
-**Current Phase:** Project Planning
+**Current Phase:** Frontend Architecture and UI Development
 
 Current milestones:
 
 * Repository initialized
-* Project structure created
+* EasyPark project identity established
+* Project architecture organized
 * Documentation structure established
-* Product planning in progress
+* Reusable component structure established
+* Page, script, and style layers separated
+* UI/UX development in progress
 
 Upcoming milestones:
 
-* Product Requirements Document (PRD)
-* Software Requirements Specification (SRS)
-* Software Design Document (SDD)
-* Database Design
-* API Design
-* UI/UX Wireframes
-* Frontend Development
-* Backend Development
-* Mobile Application
-* Deployment
+* Complete UI/UX implementation
+* Complete page-level functionality
+* Implement application interactions
+* Refine responsive design
+* Add backend/API layer when required
+* Add database integration when required
+* Add authentication and role-based access control
+* Add real-time parking availability
+* Add deployment configuration
 
 ---
 
@@ -205,20 +240,24 @@ Project Planning
 
 ## Phase 2
 
-Frontend Development
+Frontend Architecture and UI Development
 
 * HTML5
 * CSS3
 * JavaScript
+* Component organization
+* Page organization
+* Responsive design
 
 ## Phase 3
 
-React Development
+Application Development
 
-* Component Architecture
-* Routing
-* State Management
-* API Integration
+* JavaScript application logic
+* Navigation and routing
+* State management
+* Form handling
+* API integration
 
 ## Phase 4
 
@@ -228,31 +267,35 @@ Backend Development
 * Express.js
 * REST API
 * Authentication
+* Role-based access control
 
 ## Phase 5
 
 Database Integration
 
 * MongoDB
-* Data Modeling
-* CRUD Operations
+* Data modeling
+* CRUD operations
+* Reservation and parking data management
 
 ## Phase 6
 
 Advanced Features
 
-* Real-time updates
+* Real-time parking availability
 * Notifications
-* Payment Integration
-* Maps Integration
+* Payment integration
+* Maps integration
+* Analytics
 
 ## Phase 7
 
 Deployment
 
-* Docker
-* Production Deployment
-* Performance Optimization
+* Production configuration
+* Deployment
+* Performance optimization
+* Monitoring and maintenance
 
 ---
 
@@ -264,8 +307,8 @@ Project documentation is available in the `docs/` directory and will be expanded
 
 # 🎯 Project Goal
 
-The objective of ParkSmart is not only to build a functional smart parking management system but also to demonstrate professional software engineering practices, including project planning, system design, clean architecture, documentation, version control, testing, and deployment.
+The objective of EasyPark is not only to build a functional smart parking management system but also to demonstrate professional software engineering practices, including project planning, system design, clean architecture, documentation, version control, testing, and deployment.
 
 ---
 
-**ParkSmart is actively under development.**
+**EasyPark is actively under development.**
