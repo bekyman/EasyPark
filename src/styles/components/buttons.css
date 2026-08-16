@@ -21,7 +21,7 @@
 .btn-primary {
 
     background: var(--primary);
-    color: white;
+    color: rgb(28, 38, 113);
     border: 2px solid var(--primary);
 
 }
@@ -50,7 +50,7 @@
 
     background: var(--primary);
 
-    color: white;
+    color: rgb(98, 40, 6);
 
 }
 
@@ -58,7 +58,7 @@
 
     background: var(--danger);
 
-    color: white;
+    color: rgb(105, 7, 7);
 
     border: none;
 
