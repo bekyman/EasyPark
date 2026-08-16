@@ -1,4 +1,8 @@
+/* 
+    Home Page Styles
+*/
 
+/* HERO */
 .hero {
     padding: 6rem 0;
 }
@@ -50,6 +54,7 @@
 }
 
 
+/* SEARCH */
 
 .search-section {
     padding: 4rem 0;
@@ -136,30 +141,30 @@
 }
 
 
-/* FEATURES */
+/* PARKING LOCATIONS */
 
 
-.featured-section {
+.parking-locations {
     padding: 5rem 0;
 }
 
-.featured-section .section-header {
+.parking-locations .section-header {
     margin-bottom: 2.5rem;
     text-align: center;
 }
 
-.featured-section .section-header p {
+.parking-locations .section-header p {
     max-width: 600px;
     margin: 0 auto;
 }
 
-.featured-grid {
+.parking-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
 }
 
-.featured-actions {
+.parking-actions {
     display: flex;
     justify-content: center;
     margin-top: 2.5rem;
@@ -203,8 +208,8 @@
     .stats-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    /* FEATURES */
-    .featured-grid {
+    /* PARKING LOCATIONS */
+    .parking-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
@@ -246,9 +251,8 @@
         grid-template-columns: 1fr;
     }
 
-    /* FEATURES */
-
-    .featured-grid {
+    /* PARKING LOCATIONS */
+    .parking-grid {
         grid-template-columns: 1fr;
     }
 
