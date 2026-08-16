@@ -1,7 +1,7 @@
 
 .site-footer {
     background: var(--text-primary);
-    color: white;
+    color: rgb(50, 7, 62);
 
     margin-top: 5rem;
 }
@@ -18,11 +18,11 @@
 }
 
 .footer-brand .logo {
-    color: white;
+    color: rgb(77, 13, 70);
 }
 
 .footer-brand p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(37, 7, 75, 0.505);
 
     margin-top: 1rem;
 }
@@ -36,7 +36,7 @@
 }
 
 .footer-links h3 {
-    color: white;
+    color: rgb(43, 13, 74);
 
     margin-bottom: 1rem;
 }
@@ -48,13 +48,13 @@
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(7, 77, 78, 0.8);
 
     transition: color .3s ease;
 }
 
 .footer-links a:hover {
-    color: white;
+    color: rgb(27, 98, 192);
 }
 
 .footer-bottom {
@@ -66,7 +66,7 @@
 }
 
 .footer-bottom p {
-    color: rgba(255,255,255,.7);
+    color: rgba(68, 14, 14, 0.7);
 }
 
 @media (max-width:768px){
