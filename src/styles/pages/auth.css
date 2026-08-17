@@ -1,0 +1,279 @@
+/* AUTHENTICATION PAGES
+   Login / Register / Reset Password */
+
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.25rem;
+
+    background-color: var(--background);
+}
+
+
+
+.auth-container {
+    width: min(100%, 460px);
+    margin: 0 auto;
+}
+
+
+.auth-brand {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.auth-brand .logo {
+    color: var(--primary);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+
+.auth-card {
+    width: 100%;
+    padding: 2.25rem;
+
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+
+
+.auth-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.auth-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 1rem;
+
+    color: var(--primary);
+    background-color: var(--primary-light);
+    border-radius: 50%;
+}
+
+.auth-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.auth-header h1 {
+    margin-bottom: 0.625rem;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 1.75rem;
+    line-height: 1.2;
+}
+
+.auth-header p {
+    max-width: 360px;
+    margin: 0 auto;
+
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+
+
+.auth-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.auth-form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+
+.password-field {
+    position: relative;
+}
+
+.password-field .form-control {
+    padding-right: 3rem;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    padding: 0;
+
+    color: var(--text-secondary);
+
+    border: 0;
+    background: transparent;
+
+    border-radius: var(--radius-sm);
+
+    cursor: pointer;
+
+    transform: translateY(-50%);
+}
+
+.password-toggle:hover,
+.password-toggle:focus-visible {
+    color: var(--primary);
+    background-color: var(--background);
+}
+
+.password-toggle svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+
+.auth-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-top: -0.25rem;
+}
+
+
+.checkbox-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--text-secondary);
+
+    font-size: 0.875rem;
+    font-weight: 400 !important;
+
+    cursor: pointer;
+}
+
+.checkbox-group input {
+    width: 16px;
+    height: 16px;
+
+    margin: 0;
+
+    accent-color: var(--primary);
+
+    cursor: pointer;
+}
+
+
+
+.auth-link {
+    color: var(--primary);
+
+    font-size: 0.875rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+.auth-link:hover,
+.auth-link:focus-visible {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+
+
+.auth-submit {
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+
+.auth-footer {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+
+    text-align: center;
+
+    border-top: 1px solid var(--border-color);
+}
+
+.auth-footer p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+
+
+@media (max-width: 576px) {
+
+    .auth-page {
+        align-items: flex-start;
+        padding: 2rem 1rem;
+    }
+
+    .auth-container {
+        width: 100%;
+    }
+
+    .auth-card {
+        padding: 1.5rem;
+    }
+
+    .auth-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .auth-options {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .auth-card {
+        padding: 1.25rem;
+    }
+
+    .auth-brand {
+        margin-bottom: 1rem;
+    }
+
+}
