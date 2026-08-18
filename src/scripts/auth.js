@@ -1,85 +1,56 @@
 function initializePasswordToggles() {
-
-    const toggleButtons = document.querySelectorAll(
-        ".password-toggle"
-    );
+    const toggleButtons = document.querySelectorAll(".password-toggle");
 
     toggleButtons.forEach((button) => {
-
         button.addEventListener("click", () => {
+            const field = button.closest(".password-field");
 
-            const passwordField =
-                button.closest(".password-field");
-
-            if (!passwordField) {
+            if (!field) {
                 return;
             }
 
-            const input =
-                passwordField.querySelector("input");
-
-            const icon =
-                button.querySelector("[data-lucide]");
+            const input = field.querySelector("input");
 
             if (!input) {
                 return;
             }
 
-            const isPassword =
-                input.type === "password";
+            const icon = button.querySelector("[data-lucide]");
+            const showingPassword = input.type === "text";
 
+            input.type = showingPassword
+                ? "password"
+                : "text";
 
-            /*
-             * Change input type
-             */
-            input.type = isPassword
-                ? "text"
-                : "password";
-
-
-            /*
-             * Update accessibility label
-             */
             button.setAttribute(
                 "aria-label",
-                isPassword
-                    ? "Hide password"
-                    : "Show password"
+                showingPassword
+                    ? "Show password"
+                    : "Hide password"
             );
 
-
-            /*
-             * Update Lucide icon
-             */
             if (icon) {
-
                 icon.setAttribute(
                     "data-lucide",
-                    isPassword
-                        ? "eye-off"
-                        : "eye"
+                    showingPassword
+                        ? "eye"
+                        : "eye-off"
                 );
 
                 if (window.lucide) {
                     window.lucide.createIcons();
                 }
-
             }
-
         });
-
     });
-
 }
+
 
 function initializeAuth() {
-
     initializePasswordToggles();
-
 }
 
 
-document.addEventListener(
-    "DOMContentLoaded",
-    initializeAuth
-);
+document.addEventListener("DOMContentLoaded", () => {
+    initializeAuth();
+});
