@@ -46,8 +46,39 @@ function initializePasswordToggles() {
 }
 
 
+function initializeRegisterValidation() {
+    const form = document.getElementById("register-form");
+
+    if (!form) {
+        return;
+    }
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const password = document.getElementById("password");
+        const confirmPassword =
+            document.getElementById("confirm-password");
+
+        if (password.value !== confirmPassword.value) {
+            confirmPassword.setCustomValidity(
+                "Passwords do not match."
+            );
+        } else {
+            confirmPassword.setCustomValidity("");
+        }
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+        console.log("Register form passed client-side validation.");
+    });
+}
+
 function initializeAuth() {
     initializePasswordToggles();
+    initializeRegisterValidation();
 }
 
 
