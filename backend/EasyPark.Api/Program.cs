@@ -1,9 +1,11 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// OpenAPI
+// Add services to the container.
+
+builder.Services.AddControllers();
+
 builder.Services.AddOpenApi();
 
-// Allow requests from the React frontend
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("FrontendPolicy", policy =>
@@ -16,26 +18,15 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// OpenAPI is available in Development
+// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
-// Enable CORS before mapping endpoints
 app.UseCors("FrontendPolicy");
 
-// Temporary HTTP development setup.
-// We will configure HTTPS properly later.
- 
-// EasyPark API health check
-app.MapGet("/api/health", () =>
-{
-    return Results.Ok(new
-    {
-        status = "OK",
-        message = "EasyPark API is running"
-    });
-});
+app.MapControllers();
 
 app.Run();
