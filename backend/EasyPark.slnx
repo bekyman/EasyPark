@@ -1,3 +1,5 @@
 <Solution>
   <Project Path="EasyPark.Api/EasyPark.Api.csproj" />
+  <Project Path="EasyPark.Domain/EasyPark.Domain.csproj" />
+  <Project Path="EasyPark.Infrastructure/EasyPark.Infrastructure.csproj" />
 </Solution>

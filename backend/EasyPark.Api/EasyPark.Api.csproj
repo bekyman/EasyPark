@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.12" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EasyPark.Application\EasyPark.Application.csproj" />
+    <ProjectReference Include="..\EasyPark.Infrastructure\EasyPark.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
