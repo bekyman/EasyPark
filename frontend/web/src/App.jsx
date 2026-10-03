@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 
 function App() {
-  const [backendStatus, setBackendStatus] = useState(null);
+  const [backend, setBackend] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:5139/api/health")
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Backend request failed");
+          throw new Error(`HTTP error: ${response.status}`);
         }
 
         return response.json();
       })
       .then((data) => {
-        setBackendStatus(data);
+        setBackend(data);
       })
       .catch((err) => {
         setError(err.message);
@@ -22,23 +22,24 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <main>
       <h1>EasyPark</h1>
 
-      {backendStatus && (
-        <div>
-          <h2>Backend Status: {backendStatus.status}</h2>
-          <p>{backendStatus.message}</p>
-        </div>
+      {backend && (
+        <section>
+          <h2>Backend Connection</h2>
+          <p>Status: {backend.status}</p>
+          <p>{backend.message}</p>
+        </section>
       )}
 
       {error && (
-        <div>
+        <section>
           <h2>Backend Connection Failed</h2>
           <p>{error}</p>
-        </div>
+        </section>
       )}
-    </div>
+    </main>
   );
 }
 
